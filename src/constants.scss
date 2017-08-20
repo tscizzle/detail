@@ -10,3 +10,14 @@ $mobileDesktopSplit: 480px;
     @media (min-width: $mobileDesktopSplit+1)  { @content ; }
   }
 }
+
+
+/* Colors */
+
+$niceBlue: #779ECB;
+
+
+/* Layout */
+
+$sliderHeight: 50px;
+$sliderFromBottomMobile: 5vh;

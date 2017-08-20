@@ -10,28 +10,19 @@
   padding: 20px;
 
   @include breakpoint(mobile) {
+    padding-bottom: calc(#{$sliderFromBottomMobile} + #{$sliderHeight} + 10px);
     width: 100%;
   }
 
   @include breakpoint(desktop) {
-    margin: 100px 225px;
+    margin: 75px 225px;
     width: 500px;
   }
 }
 
 .post-metadata {
   font-size: 0.75em;
-  color: #779ECB;
-}
-
-.level-option {
-  background-color: white;
-  color: #333;
-
-  &.selected {
-    background-color: #333;
-    color: white;
-  }
+  color: $niceBlue;
 }
 
 .level-selector-container {

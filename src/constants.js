@@ -34,6 +34,22 @@ wow, aaaanyway, getting back to it
 
 this is 4, and i like 4
 
+i conclude 4
+
+just repeat it again to reiterate, and to make it mad long
+
+4
+
+this is 4
+
+i have tons of detail in 4, it's nuts how much detail i have in 4.
+
+this is an aside, but 4 is cool. its my most natural amount that i say, since i elaborate constantly
+
+wow, aaaanyway, getting back to it
+
+this is 4, and i like 4
+
 i conclude 4`;
 
 export const POST_OBJECTS = [

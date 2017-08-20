@@ -1,4 +1,6 @@
 /* Media */
+/* Colors */
+/* Layout */
 .main {
   width: 100%; }
 
@@ -7,22 +9,16 @@
   padding: 20px; }
   @media (max-width: 480px) {
     .post-container {
+      padding-bottom: calc(5vh + 50px + 10px);
       width: 100%; } }
   @media (min-width: 481px) {
     .post-container {
-      margin: 100px 225px;
+      margin: 75px 225px;
       width: 500px; } }
 
 .post-metadata {
   font-size: 0.75em;
   color: #779ECB; }
-
-.level-option {
-  background-color: white;
-  color: #333; }
-  .level-option.selected {
-    background-color: #333;
-    color: white; }
 
 .level-selector-container {
   position: fixed;

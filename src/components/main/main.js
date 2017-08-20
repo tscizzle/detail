@@ -29,7 +29,6 @@ class Main extends Component {
         <Post postObj={selectedPost}
               level={selectedLevel} />
         <LevelSelector numLevels={numLevels}
-                       selectedLevel={selectedLevel}
                        setSelectedLevelFunc={this.setSelectedLevel} />
       </div>
     );
@@ -40,25 +39,22 @@ class Main extends Component {
 export default Main;
 
 
-class Post extends Component {
-  render() {
-    const { postObj, level } = this.props;
-    const { title, author, content, timePosted } = postObj;
-    const text = content[level];
-    return (
-      <div className="post-container">
-        <h1> {title} </h1>
-        <div className="post-metadata">
-          <div> by {author} </div>
-          <div>
-            <Moment date={timePosted}
-                    format="MMM D, YYYY" />
-          </div>
+const Post = ({ postObj, level }) => {
+  const { title, author, content, timePosted } = postObj;
+  const text = content[level];
+  return (
+    <div className="post-container">
+      <h1> {title} </h1>
+      <div className="post-metadata">
+        <div> by {author} </div>
+        <div>
+          <Moment date={timePosted}
+                  format="MMM D, YYYY" />
         </div>
-        <Markdown source={text} />
       </div>
-    )
-  }
+      <Markdown source={text} />
+    </div>
+  )
 }
 
 Post.propTypes = {
@@ -67,23 +63,15 @@ Post.propTypes = {
 }
 
 
-class LevelSelector extends Component {
-  numStepsPerValue = 100
+const LevelSelector = ({ numLevels, setSelectedLevelFunc }) => (
+  <div className="level-selector-container">
+    {/* TODO: put a tip about the keyboard shortcut above the slider */}
+    <NiceSlider numValues={numLevels}
+                onChange={val => setSelectedLevelFunc(val)} />
+  </div>
+)
 
-  setSelectedLevel = val => {
-    const { setSelectedLevelFunc } = this.props;
-    console.log('val', val);
-    setSelectedLevelFunc(val);
-  }
-
-  render() {
-    const { numLevels, selectedLevel } = this.props;
-    return (
-      <div className="level-selector-container">
-        <NiceSlider numValues={numLevels}
-                    value={selectedLevel}
-                    onChange={this.setSelectedLevel} />
-      </div>
-    )
-  }
+LevelSelector.propTypes = {
+  numLevels: PropTypes.number.isRequired,
+  setSelectedLevelFunc: PropTypes.func.isRequired,
 }
