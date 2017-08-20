@@ -6,10 +6,10 @@
     "classnames": "^2.2.5",
     "lodash": "^4.17.4",
     "moment": "^2.18.1",
-    "moment-timezone": "^0.5.13",
     "node-sass": "^4.5.3",
     "react": "^15.6.1",
     "react-dom": "^15.6.1",
+    "react-draggable": "^2.2.6",
     "react-markdown": "^2.5.0",
     "react-moment": "^0.6.4",
     "react-scripts": "1.0.11"

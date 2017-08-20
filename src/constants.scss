@@ -1,0 +1,12 @@
+/* Media */
+
+$mobileDesktopSplit: 480px;
+
+@mixin breakpoint($device-category) {
+  @if $device-category == mobile {
+    @media (max-width: $mobileDesktopSplit) { @content ; }
+  }
+  @else if $device-category == desktop {
+    @media (min-width: $mobileDesktopSplit+1)  { @content ; }
+  }
+}

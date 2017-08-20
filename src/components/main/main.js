@@ -2,11 +2,12 @@ import React, { Component } from 'react';
 import { PropTypes } from 'prop-types';
 import Markdown from 'react-markdown';
 import Moment from 'react-moment';
-import 'moment-timezone';
 import _ from 'lodash';
 
 import { POST_OBJECTS } from '../../constants';
 import { postObjShape } from '../../propShapes';
+
+import NiceSlider from '../niceSlider/niceSlider';
 
 
 class Main extends Component {
@@ -46,9 +47,7 @@ class Post extends Component {
     const text = content[level];
     return (
       <div className="post-container">
-        <h1 className="post-title">
-          <Markdown source={title} />
-        </h1>
+        <h1> {title} </h1>
         <div className="post-metadata">
           <div> by {author} </div>
           <div>
@@ -69,19 +68,21 @@ Post.propTypes = {
 
 
 class LevelSelector extends Component {
+  numStepsPerValue = 100
+
+  setSelectedLevel = val => {
+    const { setSelectedLevelFunc } = this.props;
+    console.log('val', val);
+    setSelectedLevelFunc(val);
+  }
+
   render() {
-    const { numLevels, setSelectedLevelFunc } = this.props;
-    const levelOptions = _.map(_.range(numLevels), level => {
-      const selectLevel = () => setSelectedLevelFunc(level);
-      return (
-        <button onClick={selectLevel}>
-          {level}
-        </button>
-      )
-    });
+    const { numLevels, selectedLevel } = this.props;
     return (
-      <div>
-        {levelOptions}
+      <div className="level-selector-container">
+        <NiceSlider numValues={numLevels}
+                    value={selectedLevel}
+                    onChange={this.setSelectedLevel} />
       </div>
     )
   }

@@ -1,0 +1,10 @@
+.nice-slider {
+  position: relative;
+  height: 50px;
+  width: 200px;
+  background-color: red;
+  cursor: pointer; }
+
+.nice-slider-handle {
+  height: 100%;
+  background-color: blue; }

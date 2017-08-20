@@ -1,4 +1,4 @@
-import moment from 'moment-timezone';
+import moment from 'moment';
 
 
 const introduction0 = `0 summary`;
@@ -39,7 +39,7 @@ i conclude 4`;
 export const POST_OBJECTS = [
 {
   name: 'introduction',
-  title: 'Introduction to _detail_',
+  title: 'detail: an introduction',
   timePosted: moment('2017-08-19'),
   author: 'Tyler Singer-Clark',
   content: [

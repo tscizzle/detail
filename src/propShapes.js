@@ -1,4 +1,5 @@
 import { PropTypes } from 'prop-types';
+import momentPropTypes from 'react-moment-proptypes';
 
 
 export const postObjShape = PropTypes.shape({
@@ -6,5 +7,5 @@ export const postObjShape = PropTypes.shape({
   title: PropTypes.string.isRequired,
   author: PropTypes.string.isRequired,
   content: PropTypes.arrayOf(PropTypes.string).isRequired,
-  timePosted: PropTypes.instanceOf(Date),
+  timePosted: momentPropTypes.momentObj.isRequired,
 });
