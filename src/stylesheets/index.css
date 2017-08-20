@@ -1,0 +1,12 @@
+.post-container {
+  margin: 100px 300px; }
+
+.post-metadata {
+  font-size: 0.8em;
+  color: #779ECB; }
+
+body {
+  margin: 0;
+  padding: 0;
+  font-family: sans-serif;
+  color: #444; }
