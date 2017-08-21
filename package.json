@@ -5,6 +5,7 @@
   "homepage": "https://tscizzle.github.io/detail",
   "dependencies": {
     "classnames": "^2.2.5",
+    "gh-pages": "^1.0.0",
     "lodash": "^4.17.4",
     "moment": "^2.18.1",
     "node-sass": "^4.5.3",
@@ -24,6 +25,8 @@
     "start-react": "BROWSER=none react-scripts start",
     "start-dev": "npm-run-all -p wipe-css build-css watch-css start-react",
     "start": "react-scripts start",
+    "predeploy": "npm run build",
+    "deploy": "gh-pages -d build",
     "build": "react-scripts build",
     "test": "react-scripts test --env=jsdom",
     "eject": "react-scripts eject"
