@@ -2,56 +2,72 @@ import moment from 'moment';
 
 
 const introduction0 =
-`_detail_ is a UI`;
+`what is it
+----------
+
+_detail_ is a UI concept that lets readers see more or less detail on a text post by "zooming" in or out.
+
+Adjust the detail level of this post using the slider at the bottom, or shift + scroll.
+
+_Comment on HackerNews with any thoughts on the concept. Looking forward to discussing them!_`;
+
 const introduction1 =
-`1 a little more deets
+`what is it
+----------
 
-ya? you like?`;
+_detail_ is a UI concept that lets readers see more or less detail on a text post by "zooming" in or out.
+
+Use the slider at the bottom to adjust the detail level of this post.
+
+This is about a UI idea, nothing about programmatically summarizing text. The publisher needs to write the piece in a special way for _detail_.
+
+why does it exist
+-----------------
+
+For a given topic, different audiences prefer different amounts of detail.
+
+what is to come
+---------------
+
+I'd like to try applying _detail_ to various types of text posts.
+
+On the publisher side, there is a way to make the creation of _detail_-friendly posts not require the duplication of work.
+
+***
+
+_Please comment on HackerNews with any thoughts on the concept. Looking forward to discussing them!_`;
+
 const introduction2 =
-`2 medium deets
+`what is it
+----------
 
-i've got a lot of stuff to say
+_detail_ is a UI concept that lets readers see more or less detail on a text post by "zooming" in or out.
 
-thats all actually, kinda a lot i guess`;
+Use the slider at the bottom to adjust the detail level of this post.
+
+This is about a UI idea, nothing about programmatically summarizing text. The publisher needs to write the piece in a special way for _detail_.
+
+why does it exist
+-----------------
+
+For a given topic, different audiences prefer different amounts of detail. The tradeoff between brevity and depth has always frustrated me.
+
+what is to come
+---------------
+
+There are a bunch of areas to which I'd like to try applying _detail_, including but not limited to textbooks, tutorials, and blog posts.
+
+There is a publisher experience that goes hand in hand with this reader experience. Taking advantage of the writing process of starting with an outline, and iteratively fleshing out sections with more and more detail, a publisher can write 1 version as they already do, but yield the ~5 versions necessary to enable _detail_'s reader experience without any extra work.
+
+***
+
+_Please comment on HackerNews with any thoughts on the concept. Looking forward to discussing them!_`;
+
 const introduction3 =
-`this is 3
+``;
 
-i have many things to say
-
-i have to say more than 2, but actually less than 4.
-
-interesting.
-i conclude.`;
 const introduction4 =
-`4
-
-this is 4
-
-i have tons of detail in 4, it's nuts how much detail i have in 4.
-
-this is an aside, but 4 is cool. its my most natural amount that i say, since i elaborate constantly
-
-wow, aaaanyway, getting back to it
-
-this is 4, and i like 4
-
-i conclude 4
-
-just repeat it again to reiterate, and to make it mad long
-
-4
-
-this is 4
-
-i have tons of detail in 4, it's nuts how much detail i have in 4.
-
-this is an aside, but 4 is cool. its my most natural amount that i say, since i elaborate constantly
-
-wow, aaaanyway, getting back to it
-
-this is 4, and i like 4
-
-i conclude 4`;
+``;
 
 const DETAIL_INTRODUCTION_POST = {
   name: 'introduction',
@@ -62,8 +78,8 @@ const DETAIL_INTRODUCTION_POST = {
     introduction0,
     introduction1,
     introduction2,
-    introduction3,
-    introduction4,
+    // introduction3,
+    // introduction4,
   ],
 };
 

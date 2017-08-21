@@ -23,9 +23,19 @@
   }
 }
 
-.post-metadata {
+.post-body {
+  font-size: 0.9em;
+}
+
+.post-metadata-container {
+  padding-bottom: 10px;
+  border-bottom: solid 1px #DDD;
   font-size: 0.75em;
   color: $niceBlue;
+}
+
+.post-metadatum {
+  margin-bottom: 7px;
 }
 
 .level-selector-container {

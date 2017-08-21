@@ -1,7 +1,6 @@
 import React, { Component } from 'react';
 import { PropTypes } from 'prop-types';
 import Markdown from 'react-markdown';
-import { Throttle } from 'react-throttle';
 import Moment from 'react-moment';
 import _ from 'lodash';
 
@@ -47,14 +46,17 @@ const Post = ({ postObj, level }) => {
   return (
     <div className="post-container">
       <h1> {title} </h1>
-      <div className="post-metadata">
-        <div> by {author} </div>
-        <div>
+      <div className="post-metadata-container">
+        <div className="post-metadatum">
+          by {author}
+        </div>
+        <div className="post-metadatum">
           <Moment date={timePosted}
                   format="MMM D, YYYY" />
         </div>
       </div>
-      <Markdown source={text} />
+      <Markdown className="post-body"
+                source={text} />
     </div>
   )
 }
@@ -76,15 +78,13 @@ const LevelSelector = ({ numLevels, handleChangeLevelFunc }) => {
   return (
     <div className="level-selector-container"
          style={{width: `${width}px`}}>
-      <Throttle time="50" handler="handleWheel">
-        <NiceSlider needleClassName="level-selector-needle"
-                    numValues={numLevels}
-                    width={width}
-                    onChange={handleChangeSlider} />
-      </Throttle>
+      <NiceSlider needleClassName="level-selector-needle"
+                  numValues={numLevels}
+                  width={width}
+                  onChange={handleChangeSlider} />
       <DesktopOnly>
         <div className="level-selector-shortcut-tip">
-          shift - scroll
+          shift + scroll
         </div>
       </DesktopOnly>
     </div>
