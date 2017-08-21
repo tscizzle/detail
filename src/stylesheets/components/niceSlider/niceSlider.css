@@ -12,5 +12,13 @@
   justify-content: center;
   align-items: center;
   background-color: #555;
-  color: white;
-  cursor: pointer; }
+  color: white; }
+  .nice-slider-needle:hover {
+    background-color: #666;
+    cursor: grab; }
+  .nice-slider-needle:active {
+    background-color: #777;
+    cursor: grabbing; }
+
+.nice-slider-needle-icon {
+  pointer-events: none; }

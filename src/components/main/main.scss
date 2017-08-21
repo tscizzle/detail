@@ -3,6 +3,8 @@
 
 .main {
   width: 100%;
+  display: flex;
+  justify-content: center;
 }
 
 .post-container {
@@ -10,13 +12,14 @@
   padding: 20px;
 
   @include breakpoint(mobile) {
-    padding-bottom: calc(#{$sliderFromBottomMobile} + #{$sliderHeight} + 10px);
+    padding-bottom: calc(#{$levelSelectorBottomMobile} + (2 * #{$levelSelectorBorderWidth}) + #{$sliderHeight} + 10px);
     width: 100%;
   }
 
   @include breakpoint(desktop) {
-    margin: 75px 225px;
-    width: 500px;
+    padding-bottom: calc(#{$levelSelectorBottomDesktop} + (2 * #{$levelSelectorBorderWidth}) + #{$sliderHeight} + 10px);
+    width: $postWidthDesktop;
+    margin-top: 50px;
   }
 }
 
@@ -29,14 +32,38 @@
   position: fixed;
   display: flex;
   justify-content: center;
+  border: solid $levelSelectorBorderWidth #AAA;
+  z-index: 100;
 
   @include breakpoint(mobile) {
-    bottom: 5vh;
-    width: 100%;
+    bottom: $levelSelectorBottomMobile;
+    right: 0;
+    left: 0;
+    margin: 0 auto;
   }
 
   @include breakpoint(desktop) {
-    right: 25vw;
-    bottom: 50vh;
+    bottom: $levelSelectorBottomDesktop;
+    right: 150px;
   }
+}
+
+.level-selector-needle {
+  position: relative;
+  z-index: 110;
+}
+
+.level-selector-shortcut-tip {
+  position: absolute;
+  top: 0;
+  right: 0;
+  bottom: 0;
+  left: 0;
+  margin: auto;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  color: white;
+  pointer-events: none;
+  z-index: 105;
 }

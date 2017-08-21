@@ -13,7 +13,9 @@
     "react-icons": "^2.2.5",
     "react-markdown": "^2.5.0",
     "react-moment": "^0.6.4",
-    "react-scripts": "1.0.11"
+    "react-responsive": "^1.3.4",
+    "react-scripts": "1.0.11",
+    "react-throttle": "^0.3.0"
   },
   "scripts": {
     "wipe-css": "rm -r src/stylesheets ||:",

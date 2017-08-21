@@ -1,7 +1,8 @@
 import moment from 'moment';
 
 
-const introduction0 = `0 summary`;
+const introduction0 =
+`_detail_ is a UI`;
 const introduction1 =
 `1 a little more deets
 
@@ -52,8 +53,7 @@ this is 4, and i like 4
 
 i conclude 4`;
 
-export const POST_OBJECTS = [
-{
+const DETAIL_INTRODUCTION_POST = {
   name: 'introduction',
   title: 'detail: an introduction',
   timePosted: moment('2017-08-19'),
@@ -65,5 +65,7 @@ export const POST_OBJECTS = [
     introduction3,
     introduction4,
   ],
-},
-];
+};
+
+
+export default DETAIL_INTRODUCTION_POST;
